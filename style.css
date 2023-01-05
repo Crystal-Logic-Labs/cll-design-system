@@ -990,8 +990,6 @@ a {
     background: #FFFFFF;
 }
 
-.l-section.absolute {}
-
 .l-container {
     display: block;
     width: 850px;
@@ -1377,12 +1375,6 @@ a {
     line-height: 16px;
     color: #717171;
 }
-
-.c-icon.small {}
-
-.c-icon.medium {}
-
-.c-icon.large {}
 
 .icon-wrapper {
     display: flex;
