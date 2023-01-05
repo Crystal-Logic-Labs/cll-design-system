@@ -1378,12 +1378,6 @@ a {
     color: #717171;
 }
 
-.c-icon.small {}
-
-.c-icon.medium {}
-
-.c-icon.large {}
-
 .icon-wrapper {
     display: flex;
     gap: 6px;
