@@ -21,7 +21,7 @@ function Strength(password) {
     return i;
   }
   
-  let container = document.querySelector(".input-wrapper");
+  let container = document.querySelector(".input-wrapper-strength");
   document.addEventListener("keyup", function(e) {
     let password = document.querySelector("#myPassword").value;
   
@@ -94,3 +94,12 @@ function navHighLighter() {
     });
     
 };
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $("#copyText").text("Copied");
+}
