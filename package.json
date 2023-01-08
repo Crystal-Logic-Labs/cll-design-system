@@ -2,7 +2,8 @@
   "name": "cll-design-system",
   "version": "1.0.0",
   "description": "By Dylan Cameron",
-  "main": "package.json",
+  "main": "index.html",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +12,7 @@
     "url": "git+https://github.com/dylanharriscameron/cll-design-system.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dylan Cameron",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dylanharriscameron/Cll-Design-System/issues"
