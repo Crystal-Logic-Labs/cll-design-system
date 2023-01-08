@@ -12,6 +12,7 @@ html {
 body {
     background: #FFFFFF;
     scroll-behavior: smooth;
+    margin-top: 0;
 }
 
 h1 {
@@ -90,6 +91,29 @@ p {
     margin-bottom: 10px;
 }
 
+.p-body {
+    font-family: 'Inter', sans-serif;
+    color: #151515;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.p-body.small {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+}
+
+.p-body.large {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+
 .small {
     font-size: 14px;
     color: #6C6C6C;
@@ -116,15 +140,37 @@ p {
     letter-spacing: 0.5px;
 }
 
+.text-link.small {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    
+}
+
 
 .text-link {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
     letter-spacing: 0.5px;
-    color: #152dff;
+    font-weight: 500;
+    color: #004a36;
+    transition: all 500ms ease;
 }
 
+.text-link.onDark {
+    color: #A3E6D4;
+}
+
+.text-link:hover {
+    color: #00B987;
+    transition: all 500ms ease;
+}
+
+
+.text-link.onDark:hover {
+    color: #00B987;
+}
 
 .c-toasts {
     display: flex;
@@ -133,7 +179,7 @@ p {
     gap: 18px;
     border: 1px solid #CCCCCC;
     border-radius: 12px;
-    font-size: 15px;
+    font-size: 12px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
@@ -149,7 +195,7 @@ p {
     font-family: 'Inter', sans-serif;
     padding: 24px;
     border-radius: 12px;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.6em;
     margin-top: 0px;
     margin-bottom: 0px ;
@@ -213,12 +259,15 @@ p {
 
 .c-sidebar-wrapper {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1111;
     display: block;
-    border-radius: 12px;
-    padding: 12px 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     min-height: 100%;
-    width: 18%;
+    width: 16%;
+    background: #fAFAFA;
 }
 
 .c-brand-wrapper {
@@ -226,9 +275,8 @@ p {
     flex-direction: row;
     margin-bottom: 0;
     margin-top: 0;
-    padding: 12px 18px;
+    padding: 12px 6px;
     justify-content: flex-start;
-    align-items: center;
 }
 
 
@@ -249,10 +297,14 @@ p {
     flex-direction: row;
     width: auto;
     margin-bottom: 0px;
-    padding: 6px;
     gap: 12px;
+    margin-left: 12px;
     justify-content: flex-start;
     align-items: center;
+}
+
+.c-brand-wrapper.padded {
+    padding-left: 18px;
 }
 
 .c-brand-wrapper.justify-center {
@@ -306,39 +358,59 @@ p {
     margin-top: 0px;
 }
 
+.c-brand-text.large.onDark {
+    color: #FFFFFF;
+}
+
 .a-navlink {
     display: flex;
     padding: 8px 24px;
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
     border-left: 4px solid #FFFFFF00;
 }
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
 }
 
 .navlink {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 400;
-    color: #6C6C6c;
-}
-
-.a-navlink:hover {
-    background: #FAFAFA;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    color: #6c6c6c;
 }
 
 .a-navlink:focus .navlink {
     color: #6c6c6c;
 }
 
+.a-navlink:hover .navlink {
+    color: #151515;
+    transition: all 300ms ease;
+}
+
+.a-navlink:hover .nav-icon path {
+    stroke: #151515;
+    transition: all 300ms ease;
+}
+
 .active, .a-navlink:hover {
-    background: #fafafa;
+    background: #F5F5F5;
+    color: #151515;
     border-left: 4px solid #FFFFFF00;
+    transition: all 300ms ease;
 }
 
 .a-navlink:active {
@@ -347,7 +419,7 @@ a {
 }
 
 .a-navlink:active .navlink {
-    color: #6c6c6c;
+    color: #6C6C6c;
 }
 
 .a-navlink:active .nav-icon path {
@@ -356,10 +428,23 @@ a {
 
 
 .active {
-    background: #f5f5f5;
+    background: #F2F2F2;
     padding-left: 32px;
-    border-left: 4px solid #151515;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
+}
+
+
+.active:hover {
+    background: #CCCCCC;
+    transition: all 300ms ease;
+}
+
+.active:hover .navlink {
+    color: #151515;
+}
+
+.active:hover .nav-icon path {
+    stroke: #151515;
 }
 
 .active .navlink {
@@ -391,6 +476,7 @@ a {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
+    max-height: 100%;
 }
 
 .c-sidebar-contents-2 {
@@ -399,6 +485,60 @@ a {
     flex-shrink: 1;
     flex-basis: 0%;
     height: 100%;
+}
+
+.divider {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    min-height: 2px;
+    background: #F5F5F5;
+    width: 100%;
+}
+
+/* Toggle Switches */
+
+input[type="checkbox"] {
+    position: relative;
+    width: 28px;
+    height: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 400ms ease;
+    border: 2px solid #151515;
+    outline: none;
+}
+  
+input[type="checkbox"]::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #151515;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s;
+    outline: none;
+}
+  
+input[type="checkbox"]:checked::before {
+    transform: translateX(100%);
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    outline: none;
+}
+  
+input[type="checkbox"]:checked {
+    background-color: #151515;
+
+}
+
+input[type="checkbox"]:focus {
+    outline: none !important;
 }
 
 
@@ -480,7 +620,8 @@ a {
 
 .btn-primary.disabled:hover {
     box-shadow: none;
-    opacity: 1;
+    opacity: .74;
+    cursor: not-allowed;
 }
 
 .btn-primary.disabled .btn-text-2 {
@@ -779,11 +920,12 @@ a {
 .btn-secondary.disabled {
     box-shadow: none;
 
-    opacity: .75;
+    opacity: .5;
 }
 
 .btn-secondary.disabled:hover {
-    opacity: 0.5;
+    opacity: 0.45;
+    cursor: not-allowed;
 }
 
 .btn-secondary-hover {
@@ -820,8 +962,8 @@ a {
 .cc-font-color_light {
     width: 100%;
     height: 100%;
-    background: #F5F5F5;
     color: #F5F5F5;
+    background: #F5F5F5;
 }
 
 .cc-accent-color_1 {
@@ -981,28 +1123,30 @@ a {
 
 .l-section {
     position: static;
-    display: flex;
-    margin: auto 300px;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
 }
 
-.l-section.absolute {}
+.l-section.background-1 {
+    background: #004a36;
+}
 
 .l-container {
     display: block;
     width: 850px;
-    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: auto;
     padding: 0px 12px;
     flex-direction: column;
     border-radius: 12px;
     background: transparent;
+}
+
+
+.l-section.background-1 h3 {
+    color: #FFFFFF;
+}
+
+.l-section.background-1 .p-body {
+    color: #FFFFFF;
 }
 
 .l-row {
@@ -1193,9 +1337,32 @@ a {
 
 /* Inputs */
 
+
+input:focus {
+    outline: 2px solid #00B987 !important;
+    color: #151515;
+}
+
+.inputBox {
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
 .input-wrapper {
     position: relative;
-    width: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 48px 24px;
+    border-radius: 12px;
+    background: #FFFFFF;
+    border: 2px solid #FAFAFA;
+}
+
+.input-wrapper-strength {
+    position: relative;
+    width: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1211,7 +1378,23 @@ a {
     width: 100%;
 }
 
+.input-wrapper-strength .inputBox {
+    position: relative;
+    width: 100%;
+}
+
 .input-wrapper .inputBox input {
+    position: relative;
+    width: 100%;
+    background-color: #FAFAFA;
+    border-radius: 6px;
+    border: 2px solid #f5f5f5;
+    padding: 12px;
+    font-size: 1em;
+    color: #151515;
+}
+
+.input-wrapper-strength .inputBox input {
     position: relative;
     width: 100%;
     background-color: #FAFAFA;
@@ -1225,7 +1408,7 @@ a {
 
 
 
-.input-wrapper .strengthMeter {
+.input-wrapper-strength .strengthMeter {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1234,7 +1417,7 @@ a {
     background: transparent;
 }
 
-.input-wrapper .strengthMeter::before {
+.input-wrapper-strength .strengthMeter::before {
     content: "";
     position: absolute;
     width: 0;
@@ -1243,22 +1426,22 @@ a {
     border-radius: 50px;
 }
 
-.input-wrapper.weak .strengthMeter::before {
+.input-wrapper-strength.weak .strengthMeter::before {
     width: 10%;
     background: #FF0033;
 }
 
-.input-wrapper.medium .strengthMeter::before {
+.input-wrapper-strength.medium .strengthMeter::before {
     width: 66.66%;
     background: #FF9900;
 }
 
-.input-wrapper.strong .strengthMeter::before {
+.input-wrapper-strength.strong .strengthMeter::before {
     width: 100%;
     background: #4DC477;
 }
 
-.input-wrapper .strengthMeter::after {
+.input-wrapper-strength .strengthMeter::after {
     position: absolute;
     top: -36px;
     left: 30px;
@@ -1266,21 +1449,21 @@ a {
     transition: 0.5s;
 }
 
-.input-wrapper.weak .strengthMeter::after {
+.input-wrapper-strength.weak .strengthMeter::after {
     content: "Weak";
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: #FF0033;
 }
 
-.input-wrapper.medium .strengthMeter::after {
+.input-wrapper-strength.medium .strengthMeter::after {
     content: "medium";
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: #FF9900;
 }
 
-.input-wrapper.strong .strengthMeter::after {
+.input-wrapper-strength.strong .strengthMeter::after {
     content: "Strong";
     font-family: 'Inter', sans-serif;
     font-size: 12px;
@@ -1302,7 +1485,7 @@ a {
 
 
 .show::before {
-    content: "Show";
+    content:"Show";
     font-size: 0.6em;
     color: #6C6C6C;
     letter-spacing: 0.25px;
@@ -1310,7 +1493,7 @@ a {
 }
 
 .show.hide::before {
-    content: "Hide"
+    content: "Hide";
 }
 
 
