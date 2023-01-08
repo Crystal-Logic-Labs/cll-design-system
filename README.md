@@ -1,3 +1,3 @@
-# Crystal-Logic-Labs-Design-System
+# cll-Design-System
 
 By Dylan Cameron
