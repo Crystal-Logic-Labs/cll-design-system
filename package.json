@@ -1,0 +1,20 @@
+{
+  "name": "cll-design-system",
+  "version": "1.0.0",
+  "description": "By Dylan Cameron",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanharriscameron/Crystal-Logic-Labs-Design-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanharriscameron/Crystal-Logic-Labs-Design-System/issues"
+  },
+  "homepage": "https://github.com/dylanharriscameron/Crystal-Logic-Labs-Design-System#readme"
+}
