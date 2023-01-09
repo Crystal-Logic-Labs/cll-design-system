@@ -2,10 +2,9 @@
   "name": "cll-design-system",
   "version": "1.0.0",
   "description": "By Dylan Cameron",
-  "main": "package.json",
-
+  "main": "script.js",
+  "start": "node index.js",
   "scripts": {
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,10 +12,13 @@
     "url": "git+https://github.com/dylanharriscameron/cll-design-system.git"
   },
   "keywords": [],
-  "author": "Dylan Cameron",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dylanharriscameron/Cll-Design-System/issues"
+    "url": "https://github.com/dylanharriscameron/cll-design-system/issues"
   },
-  "homepage": "https://github.com/dylanharriscameron/Cll-Design-System#readme"
+  "homepage": "https://github.com/dylanharriscameron/cll-design-system#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
