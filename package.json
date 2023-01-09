@@ -2,7 +2,7 @@
   "name": "cll-design-system",
   "version": "1.0.0",
   "description": "By Dylan Cameron",
-  "main": "index.html",
+  "main": "package.json",
 
   "scripts": {
     "start": "node server.js",
