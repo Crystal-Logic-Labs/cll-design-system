@@ -2,7 +2,7 @@
   "name": "cll-design-system",
   "version": "1.0.0",
   "description": "By Dylan Cameron",
-  "main": "script.js",
+  "main": "server.js",
   "start": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
