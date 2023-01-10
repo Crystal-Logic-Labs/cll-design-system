@@ -154,7 +154,7 @@ p {
     line-height: 24px;
     letter-spacing: 0.5px;
     font-weight: 500;
-    color: #004a36;
+    color: #152dff;
     transition: all 500ms ease;
 }
 
@@ -163,7 +163,7 @@ p {
 }
 
 .text-link:hover {
-    color: #00B987;
+    color: #1E4A65;
     transition: all 500ms ease;
 }
 
@@ -268,7 +268,7 @@ p {
     padding-bottom: 12px;
     min-height: 100%;
     width: 16%;
-    background: #fAFAFA;
+    background: #FFFFFF;
 }
 
 .c-brand-wrapper {
@@ -540,10 +540,7 @@ a {
     font-weight: 500;
     letter-spacing: 0.25px;
     color: #6c6c6c;
-}
-
-.a-navlink:focus .navlink {
-    color: #6c6c6c;
+    transition: 300ms ease;
 }
 
 .a-navlink:hover .navlink {
@@ -557,19 +554,17 @@ a {
 }
 
 .active, .a-navlink:hover {
-    background: #CCCCCC;
+    padding-left: 32px;
     color: #151515;
     border-left: 4px solid #FFFFFF00;
     transition: all 300ms ease;
 }
 
-.a-navlink:active {
-    background: #F5F5F5;
-    border-left: 4px solid #FFFFFF00;
-}
+
 
 .a-navlink:active .navlink {
     color: #6C6C6c;
+    transition: 300ms ease;
 }
 
 .a-navlink:active .nav-icon path {
@@ -578,27 +573,27 @@ a {
 
 
 .active {
-    background: #151515;
+    background: none;
     padding-left: 32px;
     transition: all 300ms ease;
 }
 
 
 .active:hover {
-    background: #5A1417;
     transition: all 300ms ease;
 }
 
 .active:hover .navlink {
-    color: #FFFFFF;
+    color: #152dff;
+    transition: 300ms ease;
 }
 
 .active:hover .nav-icon path {
-    stroke: #FFFFFF;
+    stroke: #152dff;
 }
 
 .active .navlink {
-    color: #FFFFFF;
+    color: #152dff;
 }
 
 .nav-icon path {
@@ -606,12 +601,9 @@ a {
 }
 
 .active .nav-icon path {
-    stroke: #FFFFFF;
+    stroke: #152dff;
 }
 
-.nav-icon:active path {
-    stroke: #CCCCCC;
-}
 
 .c-link-wrapper {
     display: flex;
@@ -632,6 +624,7 @@ a {
     display: block;
     position: absolute;
     bottom: 2.5rem;
+    width: 100%;
 }
 
 .divider {
@@ -639,7 +632,9 @@ a {
     margin-bottom: 48px;
     min-height: 2px;
     background: #F5F5F5;
-    width: 100%;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Toggle Switches */
@@ -1273,8 +1268,8 @@ input[type="checkbox"]:focus {
 }
 
 .l-section.background-1 {
-    background: linear-gradient(324.03deg, #151515 22.5%, #5B5B5B 83.63%);
-    box-shadow: inset 0px 15px 4px rgba(0, 0, 0, 0.02), inset 0px 9px 4px rgba(0, 0, 0, 0.15), inset 0px 5px 3px rgba(0, 0, 0, 0.5), inset 0px 2px 2px rgba(0, 0, 0, 0.85), inset 0px 1px 1px rgba(0, 0, 0, 0.98);
+    background: #FAFAFA;
+    border-radius: 0 0 150px 0;
 }
 
 .l-container {
@@ -1290,11 +1285,11 @@ input[type="checkbox"]:focus {
 
 
 .l-section.background-1 h3 {
-    color: #FFFFFF;
+    color: #151515;
 }
 
 .l-section.background-1 .p-body {
-    color: #FFFFFF;
+    color: #151515;
 }
 
 .l-row {
@@ -1487,7 +1482,7 @@ input[type="checkbox"]:focus {
 
 
 input:focus {
-    outline: 2px solid #00B987 !important;
+    outline: 2px solid #152dff !important;
     color: #151515;
 }
 
