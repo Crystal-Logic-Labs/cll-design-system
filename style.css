@@ -1120,7 +1120,7 @@ input[type="checkbox"]:focus {
     padding: 0px 24px;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 6px;
     color: #F5F5F5;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -1204,12 +1204,11 @@ input[type="checkbox"]:focus {
 .btn-tertiary.pressed {
     background: #0010A1;
     box-shadow: inset -4px 11px 5px rgba(0, 0, 0, 0.01), inset -2px 6px 4px rgba(0, 0, 0, 0.05), inset -1px 3px 3px rgba(0, 0, 0, 0.09), inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+    cursor: wait;
 }
 
-.btn-tertiary.pressed:hover {
-    box-shadow: none;
-    background: #152dff;
-}
+
 
 .btn-tertiary.small {
     min-height: 32px;
@@ -1223,6 +1222,98 @@ input[type="checkbox"]:focus {
 .btn-text-5.small {
     font-size: 12px;
 }
+
+/* Quaternary */
+
+.btn-quaternary {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 12px;
+    min-height: 48px;
+    max-height: 48px;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    /* new */
+    border: 2px solid #152dff;
+
+    transition: all 500ms ease !important;
+}
+
+.btn-quaternary:hover {
+    border: 2px solid #152dff 50%;
+
+    transition: all 500ms ease;
+}
+
+
+
+.btn-text-7 {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    color: #152dff;
+}
+
+
+.btn-quaternary.disabled {
+    border: 2px solid #CCCCCC;
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.btn-quaternary .btn-icon-1 {
+    transform: translateY(0px);
+
+    transition: all 500ms ease;
+}
+
+.btn-quaternary:hover .btn-icon-1 {
+    transform: translateY(50px);
+
+    transition: all 500ms ease;
+}
+
+.btn-quaternary .btn-icon-2 {
+    transform: translateY(-50px);
+
+    transition: all 500ms ease;
+}
+
+.btn-quaternary:hover .btn-icon-2 {
+    transform: translateY(0px);
+
+    transition: all 500ms ease;
+}
+
+.btn-quaternary.pressed {
+    border: 2px solid #152dff50;
+}
+
+.btn-quaternary.pressed:hover {
+    cursor: wait;
+}
+
+
+.btn-quaternary.small {
+    min-height: 32px;
+    max-height: 32px;
+    max-width: 50%;
+    width: auto;
+    padding: 0px 12px;
+    border-radius: 6px;
+}
+
+.btn-text-7.small {
+    font-size: 12px;
+}
+
+/* Colors */
 
 .color-block {
     border-radius: 12px;
