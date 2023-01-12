@@ -2017,3 +2017,7 @@ input:focus {
     top: 0;
     right: 0;
 }
+
+.tabcontent.active {
+    display: block;
+}

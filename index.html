@@ -3285,22 +3285,24 @@
                 <div class="col">
                     <h5>Password Strength Checker</h5>
                     <h6>Development Version</h6>
+                    <p>Tap the code language to view more</p>
                 </div>
             </div>
             <div class="spacer _24"></div>
             <div class="l-row">
+                <div class="col">
                 <div class="code-wrapper">
                     <!-- Tab Links -->
-                    <div class="tabs">
-                        <button class="tablinks" onclick="openCode(event, 'JS')">JS</button>
+                    <div class="tabs" id="pass-strength">
+                        <button class="tablinks active" onclick="openCode(event, 'JS')">JS</button>
                         <button class="tablinks" onclick="openCode(event, 'CSS')">CSS</button>
                         <button class="tablinks" onclick="openCode(event, 'HTML')">HTML</button>
                     </div>
 
                     <!-- Tab content -->
-                    <div id="JS" class="tabcontent active">
+                    <div class="tabcontent active" id="JS">
                         <pre>
-                            <code class="language-javascript" data-language="javascript">
+                            <code class="language-javascript">
     function Strength(password) {
         let i = 0;
         if (password.length >= 4) {
@@ -3539,6 +3541,65 @@
     &lt;/div&gt;                            
                             </code>
                         </pre>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="l-row">
+                <div class="col">
+                    <h5>Sidebar</h5>
+                    <h6>Development Version</h6>
+                    <p>Tap the code language to view more</p>
+                </div>
+            </div>
+            <div class="l-row">
+                <div class="col">
+                    <div class="code-wrapper">
+                        <div class="tabs" id="sidebar-code">
+                            <button class="tablinks active" onclick="openCode(event, 'JS-2')">JS</button>
+                            <button class="tablinks" onclick="openCode(event, 'CSS-2')">CSS</button>
+                            <button class="tablinks" onclick="openCode(event, 'HTML-2')">HTML</button>
+                        </div>
+
+                        <div class="tabcontent active" id="JS-2">
+                            <pre>
+                                <code class="language-javascript">
+    const container = document.querySelector(".container");
+    const linkItems = document.querySelectorAll(".link-item");
+    const darkMode = document.querySelector(".dark-mode");
+    const logo = document.querySelector(".logo svg");
+    
+    container.addEventListener("mouseenter", () => {
+        container.classList.add("active");
+    });
+    
+    container.addEventListener("mouseleave", () => {
+        container.classList.remove("active");
+    });
+    
+    for (let i = 0; i < linkItems.length; i++) {
+        if (!linkItems[i].classList.contains("dark-mode")) {
+            linkItems[i].addEventListener("click", (e) => {
+                linkItems.forEach((linkItem) => {
+                    linkItem.classList.remove("active");
+                });
+                linkItems[i].classList.add("active");
+            });
+        }
+    }
+    
+    darkMode.addEventListener("click", function () {
+        if (document.body.classList.contains("dark-mode")) {
+            darkMode.querySelector("span").textContent = "Dark mode";
+    
+        } else {
+            darkMode.querySelector("span").textContent = "Light mode";
+        }
+        document.body.classList.toggle("dark-mode");
+    });
+                                </code>
+                            </pre>
+                        </div>
                     </div>
                 </div>
             </div>
