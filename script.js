@@ -95,14 +95,6 @@ function navHighLighter() {
     
 };
 
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-  $("#copyText").text("Copied");
-}
 
 function openCode(evt, codeName) {
   // Declare all variables
@@ -124,3 +116,4 @@ function openCode(evt, codeName) {
   document.getElementById(codeName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
