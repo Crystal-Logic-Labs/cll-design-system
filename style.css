@@ -2007,9 +2007,6 @@ input:focus {
     border: none;
 }
 
-.tabcontent.active {
-    display: block;
-}
 
 .tabs {
     padding: 36px;
