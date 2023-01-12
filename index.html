@@ -3268,71 +3268,278 @@
                         <h3>Custom Code</h3>
                     </div>
                     <div class="spacer _24"></div>
+                    <div class="c-toasts error">
+                        <div class="icon-small">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 9L9 15M9 9L15 15M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                    stroke="#d6002b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Custom code requires div classes to be paired properly. Please check documentation when implimenting.
+                    </div>
                 </div>
             </div>
             <div class="l-row">
-                <div class="col" id="PW-strength">
-                    <pre>
-                        <h5 class="code-title">
-                            <span>JS for PW Strength Checker</span>
-                        </h5>
-                        <code class="language-javascript">
-                            function Strength(password) {
-                                let i = 0;
-                                if (password.length >= 4) {
-                                  i++;
-                                }
-                                if (password.length >= 8) {
-                                  i++;
-                                }
-                                if (password.length >= 10) {
-                                  i++;
-                                }
-                                if (/[A - Z]/.test(password)) {
-                                  i++;
-                                }
-                                if (/[1 - 9]/.test(password)) {
-                                  i++;
-                                }
-                                if (/[A-Za-z0-3]/.test(password)) {
-                                  i++;
-                                }
-                                return i;
-                              }
-                              
-                              let container = document.querySelector(".input-wrapper-strength");
-                              document.addEventListener("keyup", function(e) {
-                                let password = document.querySelector("#myPassword").value;
-                              
-                                let strength = Strength(password);
-                                if (strength <= 2) {
-                                  container.classList.add("weak");
-                                  container.classList.remove("medium");
-                                  container.classList.remove("strong");
-                                } else if (strength >= 2 && strength <= 4) {
-                                  container.classList.remove("weak");
-                                  container.classList.add("medium");
-                                  container.classList.remove("strong");
-                                } else {
-                                  container.classList.remove("weak");
-                                  container.classList.remove("medium");
-                                  container.classList.add("strong");
-                                }
-                              });
-                              
-                              let pswrd = document.querySelector("#myPassword");
-                              let show = document.querySelector(".show");
-                              show.onclick = function() {
-                                if (pswrd.type === "password") {
-                                  pswrd.setAttribute("type", "text");
-                                  show.classList.add("hide");
-                                } else {
-                                  pswrd.setAttribute("type", "password");
-                                  show.classList.remove("hide");
-                                }
-                            };
-                        </code>
-                    </pre>
+                <div class="col">
+                    <h5>Password Strength Checker</h5>
+                    <h6>Development Version</h6>
+                </div>
+            </div>
+            <div class="spacer _24"></div>
+            <div class="l-row">
+                <div class="code-wrapper">
+                    <!-- Tab Links -->
+                    <div class="tabs">
+                        <button class="tablinks" onclick="openCode(event, 'JS')">JS</button>
+                        <button class="tablinks" onclick="openCode(event, 'CSS')">CSS</button>
+                        <button class="tablinks" onclick="openCode(event, 'HTML')">HTML</button>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div id="JS" class="tabcontent active">
+                        <pre>
+                            <code class="language-javascript" data-language="javascript">
+    function Strength(password) {
+        let i = 0;
+        if (password.length >= 4) {
+        i++;
+        }
+        if (password.length >= 8) {
+        i++;
+        }
+        if (password.length >= 10) {
+        i++;
+        }
+        if (/[A - Z]/.test(password)) {
+        i++;
+        }
+        if (/[1 - 9]/.test(password)) {
+        i++;
+        }
+        if (/[A-Za-z0-3]/.test(password)) {
+        i++;
+        }
+        return i;
+    }
+
+    let container = document.querySelector(".input-wrapper-strength");
+    document.addEventListener("keyup", function(e) {
+        let password = document.querySelector("#myPassword").value;
+
+        let strength = Strength(password);
+        if (strength <= 2) {
+        container.classList.add("weak");
+        container.classList.remove("medium");
+        container.classList.remove("strong");
+        } else if (strength >= 2 && strength <= 4) {
+        container.classList.remove("weak");
+        container.classList.add("medium");
+        container.classList.remove("strong");
+        } else {
+        container.classList.remove("weak");
+        container.classList.remove("medium");
+        container.classList.add("strong");
+        }
+    });
+
+    let pswrd = document.querySelector("#myPassword");
+    let show = document.querySelector(".show");
+    show.onclick = function() {
+        if (pswrd.type === "password") {
+        pswrd.setAttribute("type", "text");
+        show.classList.add("hide");
+        } else {
+        pswrd.setAttribute("type", "password");
+        show.classList.remove("hide");
+        }
+    };
+                            </code>
+                        </pre>
+                    </div>
+                    <div id="CSS" class="tabcontent">
+                        <pre>
+                            <code class="language-CSS" data-language="css">
+    input:focus {
+        outline: 2px solid #152dff !important;
+        color: #151515;
+    }
+    
+    .inputBox {
+        font-size: 14px;
+        color: #CCCCCC;
+    }
+    
+    .input-wrapper {
+        position: relative;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 48px 24px;
+        border-radius: 12px;
+        background: #FFFFFF;
+        border: 2px solid #FAFAFA;
+    }
+    
+    .input-wrapper-strength {
+        position: relative;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 48px 24px;
+        border-radius: 12px;
+        background: #FFFFFF;
+        border: 2px solid #FAFAFA;
+        padding-bottom: 72px;
+    }
+    
+    .input-wrapper .inputBox {
+        position: relative;
+        width: 100%;
+    }
+    
+    .input-wrapper-strength .inputBox {
+        position: relative;
+        width: 100%;
+    }
+    
+    .input-wrapper .inputBox input {
+        position: relative;
+        width: 100%;
+        background-color: #FAFAFA;
+        border-radius: 6px;
+        border: 2px solid #f5f5f5;
+        padding: 12px;
+        font-size: 1em;
+        color: #151515;
+    }
+    
+    .input-wrapper-strength .inputBox input {
+        position: relative;
+        width: 100%;
+        background-color: #FAFAFA;
+        border-radius: 6px;
+        border: 2px solid #f5f5f5;
+        padding: 12px;
+        font-size: 1em;
+        color: #151515;
+    }
+    
+    .input-wrapper-strength .strengthMeter {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: transparent;
+    }
+    
+    .input-wrapper-strength .strengthMeter::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        transition: 0.5s;
+        border-radius: 50px;
+    }
+    
+    .input-wrapper-strength.weak .strengthMeter::before {
+        width: 10%;
+        background: #FF0033;
+    }
+    
+    .input-wrapper-strength.medium .strengthMeter::before {
+        width: 66.66%;
+        background: #FF9900;
+    }
+    
+    .input-wrapper-strength.strong .strengthMeter::before {
+        width: 100%;
+        background: #4DC477;
+    }
+    
+    .input-wrapper-strength .strengthMeter::after {
+        position: absolute;
+        top: -36px;
+        left: 30px;
+        color: #FFF;
+        transition: 0.5s;
+    }
+    
+    .input-wrapper-strength.weak .strengthMeter::after {
+        content: "Weak";
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        color: #FF0033;
+    }
+    
+    .input-wrapper-strength.medium .strengthMeter::after {
+        content: "medium";
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        color: #FF9900;
+    }
+    
+    .input-wrapper-strength.strong .strengthMeter::after {
+        content: "Strong";
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        color: #4DC477;
+    }
+    
+    .show {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 72px;
+        background: transparent;
+        border: 6px solid transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    
+    
+    .show::before {
+        content:"Show";
+        font-size: 0.6em;
+        color: #6C6C6C;
+        letter-spacing: 0.25px;
+        text-transform: uppercase;
+    }
+    
+    .show.hide::before {
+        content: "Hide";
+    }
+                            </code>
+                        </pre>
+                    </div>
+                    <div id="HTML" class="tabcontent">
+                        <pre>
+                            <code class="language-markup">
+    &lt;div class="input-wrapper-strength"&gt;
+        &lt;div class="text-wrapper"&gt;
+            &lt;h6&gt;Password Strength Checker&lt;/h6&gt;
+            &lt;p class="small"&gt;Text suggestion goes here.
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="spacer _12"&gt;&lt;/div&gt;
+        &lt;div class="inputBox"&gt;
+            &lt;input type="password" placeholder="Password" id="myPassword"/&gt;
+            &lt;div class="show"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="text-wrapper"&gt;
+            &lt;a href="" class="text-link small"&gt;Forgot your password?&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="strengthMeter"&gt;&lt;/div&gt;
+    &lt;/div&gt;                            
+                            </code>
+                        </pre>
+                    </div>
                 </div>
             </div>
         </div>
