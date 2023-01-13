@@ -599,6 +599,11 @@ a {
     gap: 24px;
 }
 
+.nav-icon.fill path {
+    stroke: var(--text-color-dark);
+    fill: var(--text-color-dark);
+}
+
 .navlink {
     font-family: 'Inter', sans-serif;
     text-decoration: none;
