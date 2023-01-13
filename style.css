@@ -1742,7 +1742,7 @@ input[type="checkbox"]:focus {
 }
 
 .spacer-example {
-    background: var(--alert-success-light);
+    background: var(--alert-info-light);
     border-radius: 12px;
     height: 100%;
 }
